@@ -730,10 +730,6 @@
   form.addEventListener('submit', async function(e) {
     e.preventDefault();
     // Check if user has set up Formspree
-    if (form.action.includes('https://formspree.io/f/mgonbkby')) {
-      alert('⚠️ Please set up Formspree first!\n\n1. Go to formspree.io\n2. Create a free account\n3. Create a new form\n4. Replace YOUR_FORMSPREE_ID in index.html with your actual ID');
-      return;
-    }
     btn.textContent = 'Sending...'; btn.disabled = true;
     try {
       const res = await fetch(form.action, {
